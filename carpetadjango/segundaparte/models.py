@@ -1,6 +1,20 @@
 from django.db import models
 
-class Familia(models.Model):
-    nombre = models.CharField(max_length=40)
-    edad = models.IntegerField()
-    fecha_nac = models.DateField()
+class Persona(models.Model):
+    nombre= models.CharField(max_length=40)
+    nacionalidad= models.CharField(max_length=40)
+    nacimiento= models.DateField()
+    sexo=  models.CharField(max_length=40)
+
+class Contacto(models.Model):
+    direccion= models.CharField(max_length=30)
+    telefono= models.CharField(max_length=30)
+    email= models.EmailField()
+
+class Curso(models.Model):
+    nombre= models.CharField(max_length=40)
+
+class Profesor(models.Model):
+    nombre= models.CharField(max_length=30)
+    apellido= models.CharField(max_length=30)
+    materia= models.CharField(max_length=30)
