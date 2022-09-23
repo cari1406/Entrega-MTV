@@ -1,7 +1,10 @@
 from django.urls import path
-from segundaparte.views import familia
-
+from carpetadjango.views import *
 
 urlpatterns = [
-    path('familia/', familia),
+    path("", inicio),
+    path('persona/', persona),
+    path('contacto/', contacto),
+    path('curso/', curso),
+    path('profesor/', profesor),
 ] 
